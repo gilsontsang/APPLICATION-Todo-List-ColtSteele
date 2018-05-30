@@ -16,17 +16,17 @@ Similarly, previous code:
 $("span").click(...)
 */
 $("ul").on("click", "span", function(event) {
-	$(this).parent().fadeOut(500,function() {
-  	$(this).remove();
+  $(this).parent().fadeOut(500,function() {
+  $(this).remove();
   });
 	event.StopPropagation(); // This stops the method from bubbling up to other elements
 });
 
 
 $("input[type='text']").keypress(function(event) {
-	if(event.which === 13) { // 'which' property on the keypress object, corresponds to key that was pressed
+    if(event.which === 13) { // 'which' property on the keypress object, corresponds to key that was pressed
   	// grabbing new todo text from input
-  	var toDoText = $(this).val(); // recall, this is the value of 'this'
+    var toDoText = $(this).val(); // recall, this is the value of 'this'
     // clear the input
     $(this).val("");
   	// create a new li and add to ul through 'appending'
